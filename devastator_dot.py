@@ -30,13 +30,13 @@ for x in range(1, 5):
 #Define the move function and the individual commands
 def move(pos):
     if pos.top:
-        devastator_robot.right()
-    elif pos.bottom:
-        devastator_robot.left()
-    elif pos.left:
-        devastator_robot.backward()
-    elif pos.right:
         devastator_robot.forward()
+    elif pos.bottom:
+        devastator_robot.backward()
+    elif pos.left:
+        devastator_robot.left()
+    elif pos.right:
+        devastator_robot.right()
     elif pos.middle:
         os.system("sudo shutdown now")
 
