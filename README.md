@@ -43,3 +43,7 @@ Here are the steps to take to get the robot running and recording:
 ### Running the Robot on Boot
 
 To make sure the robot can run the robot on boot, I have included the `bluedot_bootup.sh` to ensure that it works. The process is the same as my Camera-Robot project. First, go to a termnal and change to the directory where you have the repository cloned. Type `chmod +x bluedot_bootup.sh` to ensure the script is executable. Then type `cd /etc/xdg/lxsession/LXDE-pi` to edit the autostart file. Type `sudo nano autostart` to edit the file. At the end of the line type `@lxterminal -e /home/pi/Documents/Bluedot-Robot/bluedot_bootup.sh` to execute the code on boot. Then go to the Menu > Preferences > Raspberry Pi Configuration > Resolution. Set the Resolution to anything other than default. Reboot and the code should now run. 
+
+## Update
+
+With the introduction of picamera2, the code has been updated to use this library. The `bluedot_update.py` contains the new module and can be used with `bootup.sh` but must be updated by referencing the new file.
